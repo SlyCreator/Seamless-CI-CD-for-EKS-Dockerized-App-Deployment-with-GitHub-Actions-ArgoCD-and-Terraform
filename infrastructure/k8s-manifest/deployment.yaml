@@ -1,0 +1,21 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app-2048
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-app-container
+          image: 186003896484.dkr.ecr.us-east-1.amazonaws.com/react-2048-app:latest
+          ports:
+            - containerPort: 3000
