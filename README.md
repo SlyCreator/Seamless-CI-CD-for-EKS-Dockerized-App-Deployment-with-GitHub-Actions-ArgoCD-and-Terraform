@@ -1,5 +1,5 @@
 This repository contains a  necessary scripts for deploying a Dockerized application using GitHub Actions, ArgoCD, Terraform, and Amazon EKS.
-Use this link to access the full article: https://slycreator.medium.com/seamless-ci-cd-for-eks-dockerized-app-deployment-with-github-actions-argocd-and-terraform-c44f083b9ebb
+Use this link to access the full [article](https://slycreator.medium.com/seamless-ci-cd-for-eks-dockerized-app-deployment-with-github-actions-argocd-and-terraform-c44f083b9ebb).
 ## Overview
 
 We aim to automate application deployment using the combination of several tools:
