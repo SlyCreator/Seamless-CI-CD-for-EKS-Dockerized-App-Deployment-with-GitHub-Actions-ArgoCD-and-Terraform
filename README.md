@@ -43,5 +43,6 @@ This setup provides an automated, reliable, and efficient way to manage applicat
 ## References
 
 Please refer to the original article for more detailed steps and explanations.
+Use this link to access the full [article](https://slycreator.medium.com/seamless-ci-cd-for-eks-dockerized-app-deployment-with-github-actions-argocd-and-terraform-c44f083b9ebb).
 
 **Please note that this is a brief summary of the article and might not include all the details. Always refer to the original article for complete information.**
