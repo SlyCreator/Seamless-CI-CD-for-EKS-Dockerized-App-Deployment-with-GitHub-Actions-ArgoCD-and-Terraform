@@ -4,7 +4,7 @@ variable "vpc_name" {
 }
 
 variable "environment" {
-  type = string
+  type        = string
   description = "Environment either staging or Prod"
 }
 variable "vpc_cidr" {

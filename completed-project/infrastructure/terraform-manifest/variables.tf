@@ -1,61 +1,77 @@
+
 variable "region" {
+  description = "AWS deployment region"
   type        = string
-  description = "The AWS region where resources will be deployed."
-}
-variable "environment" {
-  description = ""
+  default     = "ap-south-1"
 }
 
+variable "cluster_name" {
+  description = "Name of the Amazon EKS cluster"
+  type        = string
+  default     = "my-eks-app"
+}
 
 
-############# ECR ##########
+# ECR
 variable "ecr_repo_name" {
-    description = "The name of the ECR Repository"
+  description = "Name of the ECR repository"
+  type        = string
 }
 
-############# VPC ############
+# VPC
 variable "vpc_cidr" {
+  description = "CIDR block for the VPC"
   type        = string
-  description = "The CIDR block for the VPC."
 }
 
 variable "availability_zones" {
+  description = "Availability zones for AWS Mumbai"
   type        = list(string)
-  description = "A list of availability zones for the VPC."
 }
 
 variable "public_subnet_cidr_blocks" {
+  description = "CIDR blocks for public subnets"
   type        = list(string)
-  description = "A list of CIDR blocks for the public subnets."
 }
 
 variable "private_subnet_cidr_blocks" {
+  description = "CIDR blocks for private subnets"
   type        = list(string)
-  description = "A list of CIDR blocks for the private subnets."
 }
 
-############# EKS ############
-variable "cluster_name" {
+# Environment
+variable "environment" {
+  description = "Deployment environment"
   type        = string
-  description = "The name of the EKS Kubernetes cluster."
 }
+
+
 
 variable "cluster_version" {
-  description = "The version of the EKS cluster."
+  description = "EKS configuration: cluster_version"
+  type        = string
 }
 
-variable "instance_type" {
-  description = "The instance type for the EKS worker nodes."
-}
 
 variable "desired_capacity" {
-  description = "The desired number of worker nodes in the EKS cluster."
+  description = "EKS configuration: desired_capacity"
+  type        = number
 }
+
+
+variable "instance_type" {
+  description = "EKS configuration: instance_type"
+  type        = string
+}
+
 
 variable "max_capacity" {
-  description = "The maximum number of worker nodes in the EKS cluster."
+  description = "EKS configuration: max_capacity"
+  type        = number
 }
 
+
 variable "min_capacity" {
-  description = "The minimum number of worker nodes in the EKS cluster."
+  description = "EKS configuration: min_capacity"
+  type        = number
 }
