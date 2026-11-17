@@ -40,11 +40,11 @@ resource "aws_iam_role_policy_attachment" "aws_load_balancer_controller" {
 
 
 resource "helm_release" "aws_load_balancer_controller" {
-  name       = "aws-load-balancer-controller"
-  namespace  = "kube-system"
-  repository = "https://aws.github.io/eks-charts"
-  chart      = "aws-load-balancer-controller"
-  version    = "1.5.0"
+  name            = "aws-load-balancer-controller"
+  namespace       = "kube-system"
+  repository      = "https://aws.github.io/eks-charts"
+  chart           = "aws-load-balancer-controller"
+  version         = "1.5.0"
   cleanup_on_fail = true
 
   set {
